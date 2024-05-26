@@ -1,6 +1,7 @@
 # CreateQuestPdf
 
-CreateQuestPdf is a C# tool designed to generate PDF files from a set of questions. This tool is ideal for educators, trainers, and anyone who needs to create structured question documents quickly and efficiently.
+QuestPDF is a C# tool designed to generate PDF files from a set of questions. 
+This tool is ideal for educators, trainers, and anyone who needs to create structured question documents quickly and efficiently.
 
 ## Features
 
