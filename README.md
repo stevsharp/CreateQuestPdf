@@ -18,29 +18,25 @@ git clone https://github.com/stevsharp/CreateQuestPdf.git
 cd CreateQuestPdf
 dotnet restore
 
-## Usage
+##Usage
 Prepare Your Questions: Create a JSON or CSV file containing your questions.
 Run the Application: Use the following command to generate the PDF.
 
-dotnet run --path path/to/questions.json
+- **dotnet run --path path/to/questions.json
 
-dotnet run --path example_questions.json
+##This will generate a PDF file named output.pdf in the current directory.
 
-This will generate a PDF file named output.pdf in the current directory.
-
-Configuration
+##Configuration
 You can customize the appearance of your PDF by editing the appsettings.json file. This file allows you to change settings such as the font size, margins, and other layout options.
 
-Contributing
+##Contributing
 Contributions are welcome! To contribute, please follow these steps:
 
-Fork the repository.
+##Fork the repository.
 Create your feature branch (git checkout -b feature/NewFeature).
 Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature/NewFeature).
 Create a new Pull Request.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 Contact
 If you have any questions or suggestions, feel free to open an issue or contact the project maintainer at sponaris@gmail.com
