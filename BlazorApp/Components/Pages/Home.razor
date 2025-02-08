@@ -1,0 +1,44 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+@inject PdfService PdfService
+
+@inject IJSRuntime JSRuntime
+
+<h3>Print Preview</h3>
+
+<button @onclick="GeneratePdf">Show Print Preview</button>
+
+<PageTitle>Home</PageTitle>
+
+@if (!string.IsNullOrEmpty(PdfUrl))
+{
+    <iframe src="@PdfUrl" width="100%" height="600px" style="border: none;"></iframe>
+    <button @onclick="PrintPdf">Print PDF</button>
+}
+
+@code {
+    private string PdfUrl;
+
+    private async Task GeneratePdf()
+    {
+        try
+        {
+            var pdfBytes = PdfService.GeneratePdf();
+
+            PdfUrl = $"data:application/pdf;base64,{Convert.ToBase64String(pdfBytes)}";
+        }
+        catch (Exception ex)
+        {
+            var message = ex.Message;
+            throw;
+        }
+
+    }
+
+    private void PrintPdf()
+    {
+        // Use JavaScript to print the iframe
+        JSRuntime.InvokeVoidAsync("printIframe", PdfUrl);
+    }
+}
