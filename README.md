@@ -1,5 +1,9 @@
 # CreateQuestPdf
 
+## Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/spyros-ponaris-913a6937/)
+
 QuestPDF is a C# tool designed to generate PDF files from a set of questions. 
 This tool is ideal for educators, trainers, and anyone who needs to create structured question documents quickly and efficiently.
 
@@ -41,3 +45,4 @@ Create a new Pull Request.
 
 Contact
 If you have any questions or suggestions, feel free to open an issue or contact the project maintainer at sponaris@gmail.com
+
