@@ -11,11 +11,28 @@
     <ImportMap />
     <link rel="icon" type="image/png" href="favicon.png" />
     <HeadOutlet />
+
 </head>
 
 <body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
+
+    <script>
+        function printIframe(url) {
+            const iframe = document.createElement('iframe');
+            iframe.style.position = 'absolute';
+            iframe.style.top = '-10000px';
+            iframe.src = url;
+            document.body.appendChild(iframe);
+            iframe.onload = function () {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+                document.body.removeChild(iframe);
+            };
+        }
+    </script>
+
 </body>
 
 </html>
